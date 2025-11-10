@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 400px;
+            height: 210px;
+            border: 1px solid gray;
+            border-radius: 15px;
+            margin: 20px auto;
+        }
+        h2{
+            color:black;
+            text-align: center;
+        }
+        #form{
+            text-align: center;
+        }
+        .form-input{
+            width: 150px;
+            height: 20px;
+            margin-bottom: 15px;
+        }
+        .submit {
+            padding: 4px 25px;
+            margin-top: 10px;
+            border-radius: 5px;
+            color: white;
+            background-color: rgb(57, 57, 249);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Tính chỉ số BMI</h2>
+        <form id="form">
+            <div>
+              <label for="weight" class="form-label">Nhập cân nặng</label>
+              <input type="number" class="form-input" id="weight" step="0.1">
+            </div>
+            <div>
+              <label for="height" class="form-label">Nhập chiều cao(cm)</label>
+              <input type="number" class="form-input" id="height">
+            </div>
+            <button type="submit" class="submit">Submit</button>
+          </form>
+    </div>
+    <script src="./bai1.js"></script>
+</body>
+</html>
