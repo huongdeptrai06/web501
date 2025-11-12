@@ -3,9 +3,7 @@ const getFirstLast = (array) => {
     if (array.length === 0 ) return [];
     return [array[0], array[array.length - 1]];
 };
-console.log(getFirstLast([1, 2, 3, 4]));
-console.log(getFirstLast(['a', 'b', 'c']));
-console.log(getFirstLast([]));
+console.log(getFirstLast([1, 2, 3, 4]));;
 
 const swapElements =(arr) => {
     if (arr.length < 4) return arr;
@@ -65,6 +63,7 @@ fetchMultipleData([
     ])
   .then(users => console.log(users))
   .catch(err => console.error(err));
+
 
 
 
