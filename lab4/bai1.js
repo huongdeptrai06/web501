@@ -64,6 +64,39 @@ fetchMultipleData([
   .then(users => console.log(users))
   .catch(err => console.error(err));
 
+function getOrder(orderId) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({ orderId, userId: 1, productIds: [10, 20] });
+    }, 500);
+  });
+}
+
+function getUser(userId) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({ userId, name: "Alice" });
+    }, 500);
+  });
+}
+
+function getProducts(productIds) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(productIds.map(id => ({ id, name: `Product ${id}` })));
+    }, 500);
+  });
+}
+async function processOrder(orderId) {
+    const order = await getOrder(orderId);
+    const user = await getUser(order.userId);
+    const products = await getProducts(order.productIds);
+  
+    return { order, user, products };
+}
+processOrder(123)
+  .then(result => console.log(result))
+  .catch(error => console.error(error));
 
 
 
