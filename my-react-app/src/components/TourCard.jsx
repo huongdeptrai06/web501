@@ -1,5 +1,4 @@
 import Button from './button'
-import Heading from './Heading'
 
 export default function TourCard(props) {
   return (
@@ -9,9 +8,6 @@ export default function TourCard(props) {
       <div className="mt-5 flex gap-4">
         <Button label="Xem thêm" />
         <Button label="Đặt tour" />
-      </div>
-      <div className="mt-5 flex gap-4">
-        <Heading title="Tour Nội Địa" />
       </div>
     </div>
   )

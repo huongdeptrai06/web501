@@ -1,22 +1,52 @@
-function Header() {
+import { NavLink } from 'react-router-dom'
+
+export default function Header() {
+  const baseClasses = 'px-3 py-2'
+
   return (
     <nav className="my-2">
       <ul className="flex justify-around text-xl font-bold">
         <li>
-          <a href="/">Home</a>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `${baseClasses} ${isActive ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-700'}`
+            }
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <a href="/">About</a>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `${baseClasses} ${isActive ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-700'}`
+            }
+          >
+            About
+          </NavLink>
         </li>
         <li>
-          <a href="/">Booking</a>
+          <NavLink
+            to="/booking"
+            className={({ isActive }) =>
+              `${baseClasses} ${isActive ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-700'}`
+            }
+          >
+            Booking
+          </NavLink>
         </li>
         <li>
-          <a href="/">Contact</a>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `${baseClasses} ${isActive ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-700'}`
+            }
+          >
+            Contact
+          </NavLink>
         </li>
       </ul>
     </nav>
   )
 }
-
-export default Header
