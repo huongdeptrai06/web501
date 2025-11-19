@@ -2,7 +2,6 @@ const NAV_ITEMS = [
   'Tour quốc tế',
   'Tour nội địa',
   'Dịch vụ tư vấn visa',
-  'MICE - Teambuilding',
   'Giới thiệu',
   'Tin tức',
 ]
